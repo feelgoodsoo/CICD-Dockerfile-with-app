@@ -28,3 +28,7 @@ Install ArgoCD in your Kubernetes cluster following this link - https://argo-cd.
 - Setup Argo CD
 - Set Webhooks on Github
 - create new commit to test
+
+### Continue
+
+- https://github.com/feelgoodsoo/CICD-yaml-for-kube
