@@ -13,8 +13,8 @@ spec:
     args:
     - infinity
     volumeMounts:
-        - name: kaniko-secret
-          mountPath: /kaniko/.docker
+    - name: kaniko-secret
+      mountPath: /kaniko/.docker
   volumes:
   - name: kaniko-secret
     secret:
