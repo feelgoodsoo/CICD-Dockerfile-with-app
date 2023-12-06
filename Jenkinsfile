@@ -29,7 +29,7 @@ spec:
         stage('Build & Tag & Push Docker Image') {
             steps {
                 container('kaniko') {
-                    sh "executor --context=dir///home/jenkins/agent/workspace/buildimage --destination=pilsu/cicd:$BUILD_NUMBER"
+                    sh "/kaniko/executor --dockerfile `pwd`/Dockerfile --context `pwd` --destination=pilsu/cicd:$BUILD_NUMBER"
                 }
             }
         }
