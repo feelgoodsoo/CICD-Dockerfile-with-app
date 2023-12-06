@@ -12,6 +12,13 @@ spec:
     - sleep
     args:
     - infinity
+  volumes:
+  - name: kaniko-secret
+    secret:
+      secretName: regcred
+      items:
+        - key: .dockerconfigjson
+          path: config.json
 '''
         }
     }
