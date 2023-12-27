@@ -26,6 +26,13 @@ spec:
         }
     }
     stages {
+       stage('Checkout') {
+          steps {
+            container('kaniko') {
+              git branch: 'main', url: 'https://github.com/feelgoodsoo/CICD-Dockerfile-with-app.git'
+            }
+          }
+        }
         stage('Build & Tag & Push Docker Image') {
             steps {
                 container('kaniko') {
